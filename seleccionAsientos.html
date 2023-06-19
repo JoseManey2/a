@@ -3,29 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Selección de Asientos</title>
-  <style>
-    .seat {
-      width: 40px;
-      height: 40px;
-      background-color: #ccc;
-      border: 1px solid #888;
-      display: inline-block;
-      margin: 5px;
-    }
-    .seat.selected {
-      background-color: #00bfff;
-    }
-    .seat.disabled {
-      background-color: #eee;
-      pointer-events: none;
-    }
-  </style>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-
   <h1>Selección de Asientos Concierto</h1>
-  <div id="seatingArea"></div>
+  <div class="card">
+    <div id="seatingArea"></div>
+  </div>
   <script>
     // Configuración de asientos (puedes modificar esto)
     var totalSeats = 50;
@@ -53,5 +41,6 @@
       seatingArea.appendChild(seat);
     }
   </script>
+
+  
 </body>
-</html>

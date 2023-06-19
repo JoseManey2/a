@@ -1,0 +1,36 @@
+.seat {
+    width: 40px;
+    height: 40px;
+    background-color: #ccc;
+    border: 1px solid #888;
+    display: inline-flex; /* Cambio de inline-block a inline-flex */
+    justify-content: center; /* Agregado para centrar el contenido horizontalmente */
+    align-items: center; /* Agregado para centrar el contenido verticalmente */
+    margin: 5px;
+    border-radius: 50%;
+  }
+  
+  .seat.selected {
+    background-color: #794dbe;
+  }
+  
+  .seat.disabled {
+    background-color: #eee;
+    pointer-events: none;
+  }
+
+  .card {
+    text-align: center;
+    display: inline-block;
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin-left: 20px; /* Ajusta el margen izquierdo según tus necesidades */
+    margin-right: 1500px;
+  }
+  
+  
+  .titulo{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
