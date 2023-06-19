@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selección de Asientos</title>
+  <style>
+    .seat {
+      width: 40px;
+      height: 40px;
+      background-color: #ccc;
+      border: 1px solid #888;
+      display: inline-block;
+      margin: 5px;
+    }
+    .seat.selected {
+      background-color: #00bfff;
+    }
+    .seat.disabled {
+      background-color: #eee;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Selección de Asientos Concierto</h1>
+  <div id="seatingArea"></div>
+  <script>
+    // Configuración de asientos (puedes modificar esto)
+    var totalSeats = 50;
+    var reservedSeats = [10, 15, 35, 5, 25, 50]; // Asientos reservados
+
+    // Obtener el elemento del área de asientos
+    var seatingArea = document.getElementById('seatingArea');
+
+    // Generar los asientos dinámicamente
+    for (var i = 1; i <= totalSeats; i++) {
+      var seat = document.createElement('div');
+      seat.className = 'seat';
+      seat.innerText = i;
+
+      // Verificar si el asiento está reservado
+      if (reservedSeats.includes(i)) {
+        seat.className += ' disabled';
+      } else {
+        // Asignar evento de clic para seleccionar el asiento
+        seat.addEventListener('click', function() {
+          this.classList.toggle('selected');
+        });
+      }
+
+      seatingArea.appendChild(seat);
+    }
+  </script>
+</body>
+</html>
